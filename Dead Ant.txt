@@ -6,14 +6,9 @@ public class Kata
         if(null == ants ) 
            return 0;
         string s_change = ants.Replace("ant", "");
-        /*製作新的字串把活的螞蟻跟特別字元全移除  */ 
         int i_a_num = s_change.Length - s_change.Replace("a", "").Length;
-        /*取得a屍塊的數量 */
         int i_n_num = s_change.Length - s_change.Replace("n", "").Length;
-        /*取得n屍塊的數量 */
         int i_t_num = s_change.Length - s_change.Replace("t", "").Length;
-        /*取得t屍塊的數量 */ 
         return Math.Max(i_a_num, Math.Max(i_n_num , i_t_num ));
-        /*回傳最多的屍塊數量*/
   }
 }
